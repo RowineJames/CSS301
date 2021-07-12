@@ -1,0 +1,70 @@
+css301
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css301</title>
+    <Style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        #layout {
+            display: grid;
+            grid-template: auto auto auto/auto auto;
+        }
+        #nav {
+            grid-area: 1/1/2/3;
+            border: 1px solid rgb(207, 158, 158);
+            padding: 20px;
+        }
+        #sidebar {
+            grid-area: 2/1/3/2;
+            border: 1px solid rgb(207, 158, 158);
+            padding: 20px;
+            
+        }
+        #content {
+            grid-area: 2/2/3/3;
+            padding: 20px;
+            border: 1px solid rgb(207, 158, 158);
+        }
+        @media (max-width: 640px) {
+            #sidebar {
+                grid-column-end: 3;
+            }
+            #content {
+                grid-column-start: 1;
+                grid-row-start: 3;
+            }
+            }
+        
+        @media (max-width: 475px) {
+            #sidebar {display: none;}
+            #content { grid-row-start: 2;
+
+            }
+        }
+
+    </Style>
+</head>
+<body>
+    <div id="layout">
+        <div id="nav">
+            Navigation in here       
+        </div>
+        <div id="sidebar">
+            Sidebar in here
+        </div>
+        <div id="content">
+            Content in here
+        </div>
+    </div>
+</body>
+</html>
