@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+
+
+
+
+    <style>
+
+        * {
+
+            box-sizing: border-box;
+        }        
+
+
+        @font-face {
+            font-family: 'spiral_initialsregular';
+            src: url("webfontkit-20210712-095111/spiri___-webfont.woff2") format("woff2"),
+            url("webfontkit-20210712-095111/spiri___-webfont.woff") format("woff");
+            font-weight: normal;
+            font-style: normal;
+
+        }
+
+        p {
+            font-family: 'spiral_initialsregular';
+            font-size:medium;
+            color: rgb(71, 37, 25);
+            text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff;
+        }
+
+        h1, .woad {
+            font-family: 'spiral_initialsregular';
+            font-weight: 400;
+            font-style: italic;
+            color: rgb(124, 68, 48);
+            animation: blur 5.5s ease-out infinite;
+            text-shadow: 0px 0px 5px #fff, 0px 0px 7px #063608;
+        }
+
+        @keyframes blur {
+            from {
+                text-shadow:0px 0px 10px #fff,
+                0px 0px 10px #fff, 
+                0px 0px 25px #fff,
+                0px 0px 25px #fff,
+                0px 0px 25px #fff,
+                0px 0px 25px #fff,
+                0px 0px 25px #fff,
+                0px 0px 25px #fff,
+                0px 0px 50px #fff,
+                0px 0px 50px #fff,
+                0px 0px 50px #063608,
+                0px 0px 150px #063608,
+                0px 10px 100px #063608,
+                0px 10px 100px #063608,
+                0px 10px 100px #063608,
+                0px 10px 100px #063608,
+                0px -10px 100px #063608,
+                0px -10px 100px #063608;
+            }
+        }
+
+
+        body {
+            background-color:cornflowerblue ;
+            padding: 0;
+            margin: 0;
+
+        }
+
+        body {
+            overflow: visible;
+            background: linear-gradient(45deg, #085078 10%, #85d8ce 90%);
+        }
+
+        img { 
+        max-width: 100%;
+        height: auto;
+        display:flex;
+        flex-flow:column;
+        height: 1005;
+
+        }*
+
+
+        #layout {
+            display:flex;
+            flex-wrap: wrap;
+
+
+        }
+
+        #nav {
+
+            flex-basis: 100%;
+            background-color:cornflowerblue ;
+            background: linear-gradient(45deg, #085078 10%, cornflowerblue 90%);
+            border-bottom: 1px solid #aaa;
+            padding: 20px;
+            transition: ease all .5s;
+
+
+        }
+
+        #sidebar {
+            flex-basis: 20%;
+            flex-shrink: 0;
+            flex-grow: 1;
+            background-color:cornflowerblue ;
+            background: linear-gradient(45deg, #085078 10%, cornflowerblue 90%);
+            border-right: 1px solid #aaa;
+            border-bottom: 0;
+            margin-bottom: 0;
+            padding: 20px;
+            padding-bottom: 0;
+            /* border-bottom: 1px solid #aaa;    */
+            transition: ease all .5s;
+
+        }
+
+        #content {
+            background-image: url("forestbg.png");
+            background-size: cover;
+            flex-basis: 80%;
+            flex-grow: 1;
+            flex-shrink: 0;
+            padding: 0px;
+            /* border-bottom: 1px solid #aaa; */
+            transition: ease all .5s;
+
+        }
+
+        .copyr {
+            display: flex;
+            flex-basis: 100%;
+            border-top: 1px solid #aaa;
+            padding-left: 20px;
+            color: rgb(124, 68, 48);
+            height: 20px;
+            align-items: center;
+
+        }
+
+        @media (max-width: 640px) {
+
+            #sidebar, #content {
+
+            flex-basis: 100%;
+            border-right: 0;
+
+
+        }
+
+        @media (max-width: 475px) {
+
+            #sidebar {
+                display: none;
+            }
+
+        }
+
+
+
+        
+
+
+
+    }
+
+    </style>
+
+
+
+
+
+
+</head>
+<body>
+
+
+    <div id="layout">
+
+        <div id="nav">
+
+         
+            <h1 class='woad'>Woad</h1>
+
+        </div>
+
+        <div id="sidebar">
+            <p>
+             Along the banks of the Marsh River, those with druid-blessed eyes followed the blazing faerie-light of the leylines. 
+
+
+            </p>
+
+            <br>
+
+
+        </div>
+
+        <div id="content">
+        
+            <img src="woadartos.png">
+
+
+        </div>
+
+        <div class="copyr">
+
+            <h6> &copy; 2021</h6>
+
+        </div>
+
+
+    </div>
+    
+</body>
+</html>
